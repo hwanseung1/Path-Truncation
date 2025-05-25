@@ -1,0 +1,15 @@
+services:
+  web:
+    image: httpd:2.4.59
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/local/apache2/htdocs
+      - ./apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    depends_on:
+      - php
+
+  php:
+    image: php:8.1-fpm
+    volumes:
+      - ./html:/usr/local/apache2/htdocs

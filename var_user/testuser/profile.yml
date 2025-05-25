@@ -1,0 +1,7 @@
+id: user123
+username: smartuser
+bio: "백엔드 개발자"
+
+settings:
+  notifications: true
+  dark_mode: false

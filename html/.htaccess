@@ -1,0 +1,8 @@
+<Files adminer.php>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<FilesMatch "\.php$">
+    SetHandler "proxy:fcgi://php:9000"
+</FilesMatch>
